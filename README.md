@@ -1,15 +1,9 @@
 ![preview](img/Terminal_Photo.png)
 
 This is currently my Powerlevel9k Prompt.  To give you some idea of the options and things you can do with it.
-##NEW CUSTOM SEPERATORS##
 
-   # original
-        'patched': {
-                'lock': u'\uE0A2',
-                'network': u'\uE0A2',
-                'separator': u'\uE0B0',
-                'separator_thin': u'\uE0B1'
 ![preview](img/original_slanted.png)        
+	
 	},
         # angly 1
         'patched': {
@@ -61,6 +55,7 @@ This is currently my Powerlevel9k Prompt.  To give you some idea of the options 
         	'separator_thin': u'\uE0CF'
         
 ![preview](img/fractal.png)
+	
 	},
         # pixelated blocks 2 (large) random fade (pixey)
         'patched': {
