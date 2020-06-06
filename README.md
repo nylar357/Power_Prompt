@@ -12,7 +12,7 @@ This is currently my Powerlevel9k Prompt.  To give you some idea of the options 
                 'separator': u'\uE0B8',
                 'separator_thin': u'\uE0B9'
 
-![preview](img/slanted2)        
+![preview](img/slanted2.png)        
 
 	},
         # angly 2
