@@ -1,4 +1,4 @@
-![preview](img/promptpre.png)
+![preview](img/terminal_photo.png)
 
 This is currently my Powerlevel9k Prompt.  To give you some idea of the options and things you can do with it.
 
