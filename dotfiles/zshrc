@@ -6,14 +6,11 @@ export ZSH="/home/nylar/.oh-my-zsh"
 
 ###POWERLEVEL 9K PROMPT & OPTIONS SECTION###
 POWERLEVEL9K_MODE="nerdfont-complete"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time dir status newline custom_python custom_javascript)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(ram custom_wifi_signal)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir dir_writable vcs newline time dir status) POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(ram custom_wifi_signal)
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_LEFT_SEGMENT_SEPERATOR=$u'\uE0C0'
-POWERLEVEL9K_RIGHT_SEGMENT_SEPERATOR=$u'\uE0C0'        
 #POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
 #POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="↳ "
-POWERLEVEL9K_BATTERY_STAGES="▁▂▃▄▅▆▇█"
+#POWERLEVEL9K_BATTERY_STAGES="▁▂▃▄▅▆▇█"
 #POWERLEVEL9K_VPN_IP_INTERFACE="tun0"	
 zsh_wifi_signal(){
     local signal=$(nmcli device wifi | grep V01D-5G | awk '{print $7}')
@@ -146,8 +143,4 @@ alias c="clear"
 alias s="sudo"
 alias mv="sudo mv"
 alias nano="sudo nano"
-alias nordvpn-us="nordvpn connect United_States"
-alias nordvpn-cz="nordvpn connect Czech_Republic"
-alias nordvpn-es="nordvpn connect Estonia"
-alias gotop="sudo bash /home/nylar/gotop/scripts/gotop"
 alias inst="sudo apt-get install"

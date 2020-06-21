@@ -14,29 +14,27 @@ IF YOU SHOULD BE ABSOLUTELY AGAINST SWITCHING FROM  YOUR CURRENT SHELL TO ZSH, T
 (https://github.com/banga/powerline-shell)
 
 Shell : ZSH
-Shell Mod : Oh-My-Zsh
-Terminal Multiplexor & Oh-My-Tmux
+$ sudo apt install zsh 
+$ chsh -s /usr/local/bin/zsh
 
-don't underestimate the usefulness of these, 
+	*you only need to perform the chsh function if your building or for some reason you don't get the switch auto on installation*
 
-Command Syntax Highlighting & Auto-Suggestions based on command history
-Download zsh-autosuggestions by
 
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+Glyph Installation (font patching)
 
-Download zsh-syntax-highlighting by
+$ git clone https://github.com/nylar357/Power_Prompt.git
 
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-nano ~/.zshrc find plugins=(git)
+$ cd Power_Prompt/fonts
 
-Append zsh-autosuggestions & zsh-syntax-highlighting to plugins() like this
+$ ./install.sh
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+Simple as that, now reload your terminal application.  Set your font to one of the Droid NerdFonts + Powerline examples.  If you want a bigger variety of font samples that these glyphs work with, well you'll have to do the work.  
 
+Now simple edit your icons.zsh file (NerdFont Complete Section Only!) with your desired icons and wing-bang-boom set to go vroom!
 
 You would want to edit the glyph code into your ~/.oh-my-zsh/custom/themes/powerlevel9k/functions/icons.zsh file.  ONLY in the nerdfont-complete section.  Then adding to your .zshrc conf file: 
 
-POWERLEVEL9K_MODE="nerdfont-complete"
+$ POWERLEVEL9K_MODE="nerdfont-complete"
 
 
 
@@ -85,23 +83,59 @@ POWERLEVEL9K_MODE="nerdfont-complete"
 
 
 ![preview](img/fractal.png)
-	
-	},
-        # pixelated blocks 2 (large) random fade (pixey)
-        'patched': {
-        	'lock': u'\uE0A2',
-        	'network': u'\uE0A2',
-        	'separator': u'\uE0C6',
-        	'separator_thin': u'\uE0C6'
-        }
+		
+		Fractal
+        	Lock Icon : u'\uE0A2',
+        	Network Icon : u'\uE0A2',
+        	Seperator : u'\uE0C6',
+        	Seperator Thin : u'\uE0C6'
+        
 
 
 
 ![preview](img/fontforge.png)
 
-Fonts: 
-https://github.com/ryanoasis/powerline-extra-symbols
+Dependancies & Productivity Upgrades/Addons
 
-Installation of the font is the most difficult part unless you want to DL 50GB of nerdfonts.   Go to the above link and get only the patched ones we need (RyanOasis whom again I have to give the biggest thanks to bc all the real work is absolutely due to him). 
+Shell Mod : Oh-My-Zsh
 
-I had trouble with the install.sh & font-patcher.py but eventually figured out that if you simply clone the Symbol repo above, from patched-fonts folder move Droid*.otf to /usr/local/share/fonts/Nerdfonts/ then run the install.sh script provided on the same site its alot quicker than dealing with the pleathora of .local / .config / fonts / .font / font folder inconsistencies accross distros (a good time to mention I'm running on Ubuntu 18.04 for this particular work thru but I've also ran it on Kali Linux with little or no modification).  
+$ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+
+Terminal Multiplexor & Oh-My-Tmux
+
+$ sudo apt install tmux
+$ cd
+$ git clone https://github.com/gpakosz/.tmux.git
+$ ln -s -f .tmux/.tmux.conf
+$ cp .tmux/.tmux.conf.local .	
+
+	*then you do need to edit you tmux.conf.local file in some way, I usually just scroll down and set the segments, but literally if you just go all the way to the bottom and set mouse on by default that'll do*
+
+$ sudo nano .tmux/.tmux.conf.local (save your work!)
+$ tmux (all done!)
+
+Tilix (My personal choice but should work with just about any terminal app)
+
+don't underestimate the usefulness of these, 
+
+###	     PRODUCTIVITY ADDONS           ###
+### Syntax Highlighting & Autosuggestions ###
+
+Command Syntax Highlighting & Auto-Suggestions based on command history
+Download zsh-autosuggestions && zsh-syntax-highlighting
+
+$ git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
+$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+
+Activate the newly downloaded plugins by appending into your .zshrc file.
+
+$ nano ~/.zshrc		
+
+Then find the line and append, I prefer to do it vertically.  Originally you'll come to "plugins=(git)" and you want it to read like so:
+
+$ plugins=(
+git
+zsh-autosuggestions
+zsh-syntax-highlighting
+)
