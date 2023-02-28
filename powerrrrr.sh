@@ -1,3 +1,6 @@
+# A small script to automate the installation and setting of the powerline symbols to your favorite productivity related apps.
+
+
 #!/bin/bash
 
 sudo apt-get install python-pip git -y
