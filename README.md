@@ -2,6 +2,7 @@ huge props to RYANOASIS without which none of this would be possible
 
 Starting Note:  If you don't already use ZSH & Powerlevel9k for your shell and prompt elements please stop now and go to the Cyberpunk-Neon repository on my page.  That will get you to the point you need to be to go forward, and its quick and easy (15-30 miuntes).  Plus the amount of productivity and satisfaction from working your terminal will increase by magnitudes.
 
+# powerrrr.sh is  small script to automate the installation and setting of the powerline symbols to your favorite productivity related apps.
 
 ![preview](img/Terminal_Photo.png)
 
